@@ -16,7 +16,7 @@ import NProgress from 'nprogress';
 import MobileMenu from '../../components/vc-drawer/src';
 
 const docsList = [
-  { key: 'introduce', enTitle: 'Ant Design of Vue', title: 'Ant Design of Vue' },
+  { key: 'introduce', enTitle: 'Seensun Web Component', title: 'Seensun Web Component' },
   { key: 'getting-started', enTitle: 'Getting Started', title: '快速上手' },
   { key: 'use-with-vue-cli', enTitle: 'Use in vue-cli', title: '在 vue-cli 中使用' },
   { key: 'customize-theme', enTitle: 'Customize Theme', title: '定制主题' },
@@ -275,7 +275,6 @@ export default {
                 >
                   <a-affix>
                     <section class="main-menu-inner">
-                      <Sponsors isCN={isCN} />
                       <a-menu
                         class="aside-container menu-site"
                         selectedKeys={[name]}
@@ -294,8 +293,6 @@ export default {
               )}
               <a-col xxl={20} xl={19} lg={19} md={18} sm={24} xs={24}>
                 <section class="main-container main-container-component">
-                  <CarbonAds isMobile={isMobile} />
-                  <GeektimeAds isMobile={isMobile} />
                   {!isMobile ? (
                     <div class="toc-affix" style="width: 150px;">
                       {this.getSubMenu(isCN)}
@@ -359,7 +356,6 @@ export default {
           </div>
         </a-locale-provider>
         {name.indexOf('back-top') === -1 ? <a-back-top /> : null}
-        {isCN && <Geektime isMobile={isMobile} />}
       </div>
     );
   },

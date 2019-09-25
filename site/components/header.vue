@@ -40,7 +40,13 @@ export default {
           <a-col class='header-left' xxl={4} xl={5} lg={5} md={6} sm={24} xs={24}>
             <router-link to={{ path: '/' }} id='logo'>
               <img alt='logo' height='32' src={logo} />
-              <img alt='logo' height='16' src={antDesignVue} />
+              <span alt="logo" height="16" style="
+                color: rgb(64, 64, 64);
+                font-size: 18px;
+                font-weight: 500;"
+              >
+                {'SeenSun Web Component'}
+              </span>
             </router-link>
             <a-button ghost size='small' onClick={this.handleClick} class='header-lang-button' key='lang-button'>
               {isCN ? 'English' : '中文'}
@@ -129,9 +135,9 @@ export default {
                 </a-menu-item>
               </a-sub-menu>
               <a-menu-item key="sponsor">
-                <router-link to={{ path: isCN ? '/docs/vue/sponsor-cn/' :  '/docs/vue/sponsor/'}}>
-                  {isCN ? '支持我们' : 'Support us'}
-                </router-link>
+                <a href={'http://dev.seensun.cn'} target={'_blank'}>
+                  {isCN ? '开发平台首页' : 'Develope Home'}
+                </a>
               </a-menu-item>
             </a-menu>
           </a-col>
