@@ -24,6 +24,8 @@ const modalProps = (defaultProps = {}) => {
     prefixCls: PropTypes.string,
     /** 对话框是否可见*/
     visible: PropTypes.bool,
+    /** 是否开启 iframe 模式 */
+    iframe:PropTypes.bool.def(false),
     /** 确定按钮 loading*/
     confirmLoading: PropTypes.bool,
     /** 标题*/
@@ -179,6 +181,8 @@ export default {
       class: getClass(this),
       style: getStyle(this),
     };
+  
+  
     return <Dialog {...dialogProps}>{$slots.default}</Dialog>;
   },
 };

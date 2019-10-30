@@ -17,6 +17,7 @@
 | zIndex | 设置 Drawer 的 `z-index` | Number | 1000 |
 | placement | 抽屉的方向 | 'top'  \| 'right' \| 'bottom' \| 'left' | 'right'|
 | handle | 设置后抽屉直接挂载到DOM上，你可以通过该handle控制抽屉打开关闭 | VNode \| slot | - |
+| iframe | 是否开启 iframe 模式，开启后底层会加入一层 iframe，这样就可以浮在 object 元素之上 | Boolean | false |
 
 ## 方法
 

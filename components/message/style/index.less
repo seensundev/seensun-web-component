@@ -21,12 +21,17 @@
   }
 
   &-notice-content {
+    position: relative;
     padding: @message-notice-content-padding;
     border-radius: @border-radius-base;
     box-shadow: @shadow-2;
     background: @component-background;
     display: inline-block;
     pointer-events: all;
+
+    .@{ant-prefix}-iframe{
+      margin-top: -10px;
+    }
   }
 
   &-success .@{iconfont-css-prefix} {

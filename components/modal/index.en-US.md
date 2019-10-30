@@ -24,6 +24,7 @@
 | width | Width of the modal dialog | string\|number | 520 |
 | wrapClassName | The class name of the container of the modal dialog | string | - |
 | zIndex | The `z-index` of the Modal | Number | 1000 |
+| iframe | open or close iframe mode, if open it, can add on top of object element. | Boolean | - |
 
 ### events
 | Events Name | Description | Arguments |

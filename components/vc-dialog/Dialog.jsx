@@ -6,6 +6,8 @@ import BaseMixin from '../_util/BaseMixin';
 import getTransitionProps from '../_util/getTransitionProps';
 import getScrollBarSize from '../_util/getScrollBarSize';
 import getDialogPropTypes from './IDialogPropTypes';
+import IFrame from '../iframe';
+import PropTypes from '../_util/vue-types';
 const IDialogPropTypes = getDialogPropTypes();
 
 let uuid = 0;
@@ -53,6 +55,7 @@ export default {
   mixins: [BaseMixin],
   props: {
     ...IDialogPropTypes,
+    iframe: PropTypes.bool,
     ...initDefaultProps(IDialogPropTypes, {
       mask: true,
       visible: false,
@@ -266,6 +269,7 @@ export default {
             sentinelStart
           </div>
           <div class={`${prefixCls}-content`}>
+            {this.$props.iframe ? <IFrame /> : null}
             {closer}
             {header}
             <div key="body" class={`${prefixCls}-body`} style={bodyStyle} ref="body" {...bodyProps}>

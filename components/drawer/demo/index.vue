@@ -4,6 +4,7 @@ import Placement from './placement';
 import UserProfile from './user-profile';
 import MultiLevelDrawer from './multi-level-drawer';
 import FormInDrawer from './form-in-drawer';
+import WithIframe from './with-iframe';
 // import CustomPaging from './customPaging'
 // import CustomArrows from './customArrows'
 
@@ -53,6 +54,7 @@ export default {
         <FormInDrawer />
         <UserProfile />
         <MultiLevelDrawer />
+        <WithIframe/>
         <api>
           <CN slot='cn' />
           <US />

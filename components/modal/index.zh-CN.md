@@ -24,6 +24,7 @@
 | width | 宽度 | string\|number | 520 |
 | wrapClassName | 对话框外层容器的类名 | string | - |
 | zIndex | 设置 Modal 的 `z-index` | Number | 1000 |
+| iframe | 是否开启 iframe 模式，开启后底层会加入一层 iframe，这样就可以浮在 object 元素之上 | Boolean | false |
 
 ### 事件
 | 事件名称 | 说明 | 回调参数 |

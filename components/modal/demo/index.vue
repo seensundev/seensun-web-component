@@ -1,6 +1,7 @@
 <script>
 import Async from './async';
 import Basic from './basic';
+import Iframe from './iframe';
 import ConfirmPromise from './confirm-promise';
 import Confirm from './confirm';
 import Footer from './footer';
@@ -49,6 +50,7 @@ export default {
         <Manual/>
         <Position/>
         <ButtonProps />
+        <Iframe/>
         <api>
           <CN slot='cn' />
           <US/>

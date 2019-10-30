@@ -17,6 +17,7 @@
 | zIndex | The `z-index` of the Drawer. | Number | 1000 |
 | placement | The placement of the Drawer. | 'top'  \| 'right' \| 'bottom' \| 'left' | 'right' |
 | handle | After setting, the drawer is directly mounted on the DOM, and you can control the drawer to open or close through this `handle`. | VNode \| slot | - |
+| iframe | open or close iframe mode, if open it, can add on top of object element. | Boolean | - |
 
 
 ## Methods

@@ -6,6 +6,7 @@ import createChainedFunction from '../_util/createChainedFunction';
 import getTransitionProps from '../_util/getTransitionProps';
 import Notice from './Notice';
 import Base from '../base';
+import Iframe from '../iframe';
 
 function noop() {}
 
@@ -100,7 +101,10 @@ const Notification = {
         key,
       };
       return (
-        <Notice {...noticeProps}>{typeof content === 'function' ? content(h) : content}</Notice>
+        <Notice {...noticeProps}>
+          <Iframe />
+          {typeof content === 'function' ? content(h) : content}
+        </Notice>
       );
     });
     const className = {

@@ -2,6 +2,7 @@ import classnames from 'classnames';
 import VcDrawer from '../vc-drawer/src';
 import PropTypes from '../_util/vue-types';
 import BaseMixin from '../_util/BaseMixin';
+import Iframe from '../iframe';
 import Icon from '../icon';
 import { getComponentFromProp, getOptionProps } from '../_util/props-util';
 import Base from '../base';
@@ -18,6 +19,7 @@ const Drawer = {
     wrapStyle: PropTypes.object,
     title: PropTypes.any,
     visible: PropTypes.bool,
+    iframe:PropTypes.bool.def(false),
     width: PropTypes.oneOfType([PropTypes.string, PropTypes.number]).def(256),
     height: PropTypes.oneOfType([PropTypes.string, PropTypes.number]).def(256),
     zIndex: PropTypes.number,
@@ -203,7 +205,7 @@ const Drawer = {
         ...this.$listeners,
       },
     };
-    return <VcDrawer {...vcDrawerProps}>{this.renderBody()}</VcDrawer>;
+    return <VcDrawer {...vcDrawerProps}> { props.iframe ? <Iframe/> : null}  {this.renderBody()}</VcDrawer>;
   },
 };
 

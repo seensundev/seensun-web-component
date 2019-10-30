@@ -2,11 +2,13 @@ import Dialog from './Dialog';
 import ContainerRender from '../_util/ContainerRender';
 import getDialogPropTypes from './IDialogPropTypes';
 import { getStyle, getClass } from '../_util/props-util';
+import PropTypes from '../_util/vue-types';
 const IDialogPropTypes = getDialogPropTypes();
 const DialogWrap = {
   props: {
     ...IDialogPropTypes,
     visible: IDialogPropTypes.visible.def(false),
+    iframe: PropTypes.bool,
   },
   data() {
     this.renderComponent = () => {};
@@ -46,6 +48,7 @@ const DialogWrap = {
           ...on,
         },
       };
+
       return <Dialog {...dialogProps}>{$slots.default}</Dialog>;
     },
 
