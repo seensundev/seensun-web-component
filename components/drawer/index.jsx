@@ -19,7 +19,7 @@ const Drawer = {
     wrapStyle: PropTypes.object,
     title: PropTypes.any,
     visible: PropTypes.bool,
-    iframe:PropTypes.bool.def(false),
+    iframe: PropTypes.bool.def(false),
     width: PropTypes.oneOfType([PropTypes.string, PropTypes.number]).def(256),
     height: PropTypes.oneOfType([PropTypes.string, PropTypes.number]).def(256),
     zIndex: PropTypes.number,
@@ -205,7 +205,12 @@ const Drawer = {
         ...this.$listeners,
       },
     };
-    return <VcDrawer {...vcDrawerProps}> { props.iframe ? <Iframe/> : null}  {this.renderBody()}</VcDrawer>;
+    return (
+      <VcDrawer {...vcDrawerProps}>
+        {' '}
+        {props.iframe ? <Iframe /> : null} {this.renderBody()}
+      </VcDrawer>
+    );
   },
 };
 
