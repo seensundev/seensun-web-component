@@ -21,7 +21,6 @@
 }
 </style>
 
-
 ## 特性
 
 - 提炼自企业级中后台产品的交互语言和视觉风格。
@@ -30,8 +29,8 @@
 
 ## 支持环境
 
-* 现代浏览器和 IE9 及以上（需要 [polyfills](https://vue.ant.design/docs/vue/getting-started-cn/#兼容性)）。
-* 支持服务端渲染。
+- 现代浏览器和 IE9 及以上（需要 [polyfills](https://vue.ant.design/docs/vue/getting-started-cn/#兼容性)）。
+- 支持服务端渲染。
 
 ## 版本
 
@@ -95,7 +94,7 @@ import 'seensun-web-component/dist/antd.css';  // or 'seensun-web-component/dist
    }
    ```
 
-   > 注意：webpack 1 无需设置 `libraryDirectory`。
+  > 注意：webpack 1 无需设置 `libraryDirectory`。
 
    然后只需从 seensun-web-component 引入模块即可，无需单独引入样式。等同于下面手动引入的方式。
 
@@ -128,9 +127,9 @@ import 'seensun-web-component/dist/antd.css';  // or 'seensun-web-component/dist
 
 ## 关于seensun-web-component
 
-众所周知，Ant Design作为一门设计语言面世，经历过多年的迭代和积累，它对UI的设计思想已经成为一套事实标准，受到众多前端开发者及企业的追捧和喜爱，也是React开发者手中的神兵利器。希望ant-design-vue能够让Vue开发者也享受到Ant Design的优秀设计。
+众所周知，Ant Design 作为一门设计语言面世，经历过多年的迭代和积累，它对 UI 的设计思想已经成为一套事实标准，受到众多前端开发者及企业的追捧和喜爱，也是 React 开发者手中的神兵利器。希望 ant-design-vue 能够让 Vue 开发者也享受到 Ant Design 的优秀设计。
 
-ant-design-vue 是 Ant Design 的Vue实现，组件的风格与Ant Design保持同步，组件的html结构和css样式也保持一致，真正做到了样式0修改，组件API也尽量保持了一致。
+ant-design-vue 是 Ant Design 的 Vue 实现，组件的风格与 Ant Design 保持同步，组件的 html 结构和 css 样式也保持一致，真正做到了样式 0 修改，组件 API 也尽量保持了一致。
 
 Ant Design Vue 致力于提供给程序员**愉悦**的开发体验。
 
@@ -139,4 +138,3 @@ Seensun Web Component 基于 Ant Design Vue 的附加实现。
 ## 特别感谢
 
 [Ant Design Team](https://github.com/ant-design/ant-design/blob/master/AUTHORS.txt)
-

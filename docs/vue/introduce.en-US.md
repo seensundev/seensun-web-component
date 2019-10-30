@@ -1,4 +1,3 @@
-
 # Ant Design of Vue
 
 Following the Ant Design specification, we developed a Vue UI library `antd` that contains a set of high quality components and demos for building rich, interactive user interfaces.
@@ -8,7 +7,6 @@ Following the Ant Design specification, we developed a Vue UI library `antd` tha
   <span>+</span>
   <img width="160" src="https://cn.vuejs.org/images/logo.png">
 </div>
-
 
 <style>
 .pic-plus > * {
@@ -22,7 +20,6 @@ Following the Ant Design specification, we developed a Vue UI library `antd` tha
 }
 </style>
 
-
 ## Features
 
 - An enterprise-class UI design language for web applications.
@@ -31,8 +28,8 @@ Following the Ant Design specification, we developed a Vue UI library `antd` tha
 
 ## Environment Support
 
-* Modern browsers and Internet Explorer 9+ (with [polyfills](https://vue.ant.design/docs/vue/getting-started/#Compatibility))
-* Server-side Rendering
+- Modern browsers and Internet Explorer 9+ (with [polyfills](https://vue.ant.design/docs/vue/getting-started/#Compatibility))
+- Server-side Rendering
 
 ## Version
 
@@ -95,9 +92,9 @@ import 'seensun-web-component/dist/antd.css';  // or 'seensun-web-component/dist
    }
    ```
 
-   > Note: Don't set `libraryDirectory` if you are using webpack 1.
+  > Note: Don't set `libraryDirectory` if you are using webpack 1.
 
-   This allows you to import components from antd without having to manually import the corresponding stylesheet. The antd babel plugin will automatically import stylesheets.
+  This allows you to import components from antd without having to manually import the corresponding stylesheet. The antd babel plugin will automatically import stylesheets.
 
    ```jsx
    // import js and css modularly, parsed by babel-plugin-import
