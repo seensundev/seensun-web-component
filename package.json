@@ -1,6 +1,6 @@
 {
     "name": "seensun-web-component",
-    "version": "1.4.3",
+    "version": "1.4.4",
     "title": "SeenSun Web Component",
     "description": "An enterprise-class UI component based on ant-design-vue",
     "keywords": [
@@ -32,6 +32,8 @@
         "site": "node scripts/run.js _site",
         "copy": "node scripts/run.js copy-html",
         "compile": "node antd-tools/cli/run.js compile",
+        "prettier": "prettier -c --write '**/*'",
+        "pretty-quick": "pretty-quick",
         "dist": "node antd-tools/cli/run.js dist",
         "lint": "eslint -c ./.eslintrc --fix --ext .jsx,.js,.vue ./components",
         "lint:style": "stylelint \"{site,components}/**/*.less\" --syntax less",
@@ -47,11 +49,12 @@
     "bugs": {
         "url": "https://github.com/seensundev/seensun-web-component/issues"
     },
-    "homepage": "https://github.com/seensundev/seensun-web-component",
-    "pre-commit": [
-        "lint",
-        "prettier"
-    ],
+    "homepage": "https://github.com/seensundev/seensun-web-component.git",
+    "husky": {
+        "hooks": {
+            "pre-commit": "pretty-quick --staged"
+        }
+    },
     "peerDependencies": {
         "vue": ">=2.6.6",
         "vue-template-compiler": ">=2.6.6"

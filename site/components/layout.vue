@@ -14,9 +14,11 @@ import { isZhCN } from '../util';
 import { Provider, create } from '../../components/_util/store';
 import NProgress from 'nprogress';
 import MobileMenu from '../../components/vc-drawer/src';
+import GoogleAdsTop from './GoogleAdsTop';
+import GoogleAds from './GoogleAds';
 
 const docsList = [
-  { key: 'introduce', enTitle: 'Seensun Web Component', title: 'Seensun Web Component' },
+  { key: 'introduce', enTitle: 'Ant Design of Vue', title: 'Ant Design of Vue' },
   { key: 'getting-started', enTitle: 'Getting Started', title: '快速上手' },
   { key: 'use-with-vue-cli', enTitle: 'Use in vue-cli', title: '在 vue-cli 中使用' },
   { key: 'customize-theme', enTitle: 'Customize Theme', title: '定制主题' },
@@ -129,11 +131,9 @@ export default {
         const title = isCN ? cnTitle : usTitle;
         lis.push(<a-anchor-link key={id} href={`#${id}`} title={title} />);
       });
-      const showApi = this.$route.path.indexOf('/components/') !== -1;
       return (
         <a-anchor offsetTop={100} class="demo-anchor">
           {lis}
-          {showApi ? <a-anchor-link key="API" title="API" href="#API" /> : ''}
         </a-anchor>
       );
     },
@@ -240,7 +240,7 @@ export default {
     }
     const config = AllDemo[titleMap[reName]];
     this.resetDocumentTitle(config, reName, isCN);
-    const { isMobile } = this;
+    const { isMobile, $route } = this;
     return (
       <div class="page-wrapper">
         <Header searchData={searchData} name={name} />
@@ -275,6 +275,7 @@ export default {
                 >
                   <a-affix>
                     <section class="main-menu-inner">
+                      <Sponsors isCN={isCN} />
                       <a-menu
                         class="aside-container menu-site"
                         selectedKeys={[name]}
@@ -293,8 +294,11 @@ export default {
               )}
               <a-col xxl={20} xl={19} lg={19} md={18} sm={24} xs={24}>
                 <section class="main-container main-container-component">
+                  <GoogleAdsTop key={`GoogleAdsTop_${$route.path}`} />
+                  {!isMobile ? <CarbonAds /> : null}
+                  <GeektimeAds isMobile={isMobile} />
                   {!isMobile ? (
-                    <div class="toc-affix" style="width: 150px;">
+                    <div class={['toc-affix', isCN ? 'toc-affix-cn' : '']} style="width: 150px;">
                       {this.getSubMenu(isCN)}
                     </div>
                   ) : null}
@@ -327,6 +331,7 @@ export default {
                           ],
                         }}
                       ></router-view>
+                      <GoogleAds key={`GoogleAds_${$route.path}`} />
                     </div>
                   ) : (
                     ''
@@ -356,6 +361,7 @@ export default {
           </div>
         </a-locale-provider>
         {name.indexOf('back-top') === -1 ? <a-back-top /> : null}
+        {isCN && <Geektime isMobile={isMobile} />}
       </div>
     );
   },

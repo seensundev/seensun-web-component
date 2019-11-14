@@ -35,7 +35,7 @@ Following the Ant Design specification, we developed a Vue UI library `antd` tha
 
 - Stable: [![npm package](https://img.shields.io/npm/v/ant-design-vue.svg?style=flat-square)](https://www.npmjs.org/package/ant-design-vue)
 
-You can subscribe to this feed for new version notifications: https://github.com/vueComponent/seensun-web-component/releases.atom
+You can subscribe to this feed for new version notifications: https://github.com/vueComponent/ant-design-vue/releases.atom
 
 ## Installation
 
@@ -44,11 +44,11 @@ You can subscribe to this feed for new version notifications: https://github.com
 **We recommend using npm or yarn to install**，it not only makes development easier，but also allow you to take advantage of the rich ecosystem of Javascript packages and tooling.
 
 ```bash
-$ npm install seensun-web-component --save
+$ npm install ant-design-vue --save
 ```
 
 ```bash
-$ yarn add seensun-web-component
+$ yarn add ant-design-vue
 ```
 
 If you are in a bad network environment，you can try other registries and tools like [cnpm](https://github.com/cnpm/cnpm).
@@ -59,7 +59,7 @@ If you are in a bad network environment，you can try other registries and tools
 
 Add `script` and `link` tags in your browser and use the global variable `antd`.
 
-We provide `antd.js` `antd.css` and `antd.min.js` `antd.min.css` under `seensun-web-component/dist` in antd's npm package. You can also download these files directly from [![jsdelivr](https://data.jsdelivr.com/v1/package/npm/seensun-web-component/badge)](https://www.jsdelivr.com/package/npm/seensun-web-component) or [unpkg](https://unpkg.com/seensun-web-component/dist/).
+We provide `antd.js` `antd.css` and `antd.min.js` `antd.min.css` under `ant-design-vue/dist` in antd's npm package. You can also download these files directly from [![jsdelivr](https://data.jsdelivr.com/v1/package/npm/ant-design-vue/badge)](https://www.jsdelivr.com/package/npm/ant-design-vue) or [unpkg](https://unpkg.com/ant-design-vue/dist/).
 
 > **We strongly discourage loading the entire files** this will add bloat to your application and make it more difficult to receive bugfixes and updates. Antd is intended to be used in conjunction with a build tool, such as [webpack](https://webpack.github.io/), which will make it easy to import only the parts of antd that you are using.
 
@@ -69,46 +69,45 @@ We provide `antd.js` `antd.css` and `antd.min.js` `antd.min.css` under `seensun-
 
 ```jsx
 import Vue from 'vue';
-import { DatePicker } from 'seensun-web-component';
+import { DatePicker } from 'ant-design-vue';
 Vue.use(DatePicker);
 ```
 
 And import stylesheets manually:
 
 ```jsx
-import 'seensun-web-component/dist/antd.css';  // or 'seensun-web-component/dist/antd.less'
+import 'ant-design-vue/dist/antd.css'; // or 'ant-design-vue/dist/antd.less'
 ```
 
 ### Use modularized antd
 
 - Use [babel-plugin-import](https://github.com/ant-design/babel-plugin-import) (Recommended)
 
-   ```js
-   // .babelrc or babel-loader option
-   {
-     "plugins": [
-       ["import", { "libraryName": "seensun-web-component", "libraryDirectory": "es", "style": "css" }] // `style: true` for less
-     ]
-   }
-   ```
+  ```js
+  // .babelrc or babel-loader option
+  {
+    "plugins": [
+      ["import", { "libraryName": "ant-design-vue", "libraryDirectory": "es", "style": "css" }] // `style: true` for less
+    ]
+  }
+  ```
 
   > Note: Don't set `libraryDirectory` if you are using webpack 1.
 
   This allows you to import components from antd without having to manually import the corresponding stylesheet. The antd babel plugin will automatically import stylesheets.
 
-   ```jsx
-   // import js and css modularly, parsed by babel-plugin-import
-   import { DatePicker } from 'seensun-web-component';
-   ```
+  ```jsx
+  // import js and css modularly, parsed by babel-plugin-import
+  import { DatePicker } from 'ant-design-vue';
+  ```
 
 - Manually import
 
-   ```jsx
-   import DatePicker from 'seensun-web-component/lib/date-picker';  // for js
-   import 'seensun-web-component/lib/date-picker/style/css';        // for css
-   // import 'seensun-web-component/lib/date-picker/style';         // that will import less
-   ```
-
+  ```jsx
+  import DatePicker from 'ant-design-vue/lib/date-picker'; // for js
+  import 'ant-design-vue/lib/date-picker/style/css'; // for css
+  // import 'ant-design-vue/lib/date-picker/style';         // that will import less
+  ```
 
 ## Links
 
@@ -120,11 +119,13 @@ import 'seensun-web-component/dist/antd.css';  // or 'seensun-web-component/dist
 - [Customize Theme](/docs/vue/customize-theme)
 - [FAQ](/docs/vue/faq)
 - [Support US](/docs/vue/sponsor)
+- [Awesome Ant Design](https://github.com/vueComponent/ant-design-vue-awesome)
 
 ## Contributing
 
+If you'd like to help us improve antd, just create a [Pull Request](https://github.com/vueComponent/ant-design-vue/pulls). Feel free to report bugs and issues [here](https://vuecomponent.github.io/issue-helper/).
 
-Visit BBS [bbs.dev.seensun.cn](https://bbs.dev.seensun.cn).
+> If you're new to posting issues, we ask that you read [_How To Ask Questions The Smart Way_](http://www.catb.org/~esr/faqs/smart-questions.html) and [How to Ask a Question in Open Source Community](https://github.com/seajs/seajs/issues/545) and [How to Report Bugs Effectively](http://www.chiark.greenend.org.uk/~sgtatham/bugs.html) prior to posting. Well written bug reports help us help you!
 
 ## THANK YOU
 
